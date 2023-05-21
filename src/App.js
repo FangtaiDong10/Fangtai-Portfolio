@@ -4,6 +4,10 @@ import Alert from "./components/Alert";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+// business logic components
+import LandingSection from "./components/LandingSections";
+import ProjectsSection from "./components/ProjectsSection";
+import ContactMeSection from "./components/ContactMeSection";
 
 function App() {
   return (
@@ -12,11 +16,14 @@ function App() {
         <main>
           <Header />
           <Footer />
+          <LandingSection />
+          <ProjectsSection />
+          <ContactMeSection />
           <Alert />
         </main>
       </AlertProvider>
     </ChakraProvider>
-  )
+  );
 }
 
 export default App;

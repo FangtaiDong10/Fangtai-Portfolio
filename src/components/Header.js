@@ -12,7 +12,7 @@ import { Box, HStack } from "@chakra-ui/react";
 const socials = [
   {
     icon: faEnvelope,
-    url: "fangtaidong0008@gmail.com",
+    url: "",
   },
   {
     icon: faGithub,
@@ -44,11 +44,11 @@ const Header = () => {
     }
   };
 
-  // React rendering list item
-  const listIconItems = socials.map((item) => {
+  // Rendering each list item
+  const listIconItems = socials.map(({ icon, url }) => {
     return (
-      <a href={item.url} key={item.url}>
-        <FontAwesomeIcon icon={item.icon} size="2x" />
+      <a href={url} key={url} target="_blank" rel="noopener noreferrer">
+        <FontAwesomeIcon icon={icon} size="2x" key={url} />
       </a>
     );
   });
@@ -78,12 +78,12 @@ const Header = () => {
           <nav>
             <HStack spacing={8}>
               {
-                <a href="/#projects" onClick={handleClick}>
+                <a href="#projects" onClick={handleClick("project")}>
                   Projects
                 </a>
               }
               {
-                <a href="/#contact-me" onClick={handleClick}>
+                <a href="#contact-me" onClick={handleClick("contactme")}>
                   Contact Me
                 </a>
               }
