@@ -15,10 +15,10 @@ function App() {
       <AlertProvider>
         <main>
           <Header />
-          <Footer />
           <LandingSection />
           <ProjectsSection />
           <ContactMeSection />
+          <Footer />
           <Alert />
         </main>
       </AlertProvider>
